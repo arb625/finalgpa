@@ -1,0 +1,23 @@
+{
+  "parser"  : "babel-eslint",  // allow eslint to lint babel code
+  "extends" : [
+    "standard",
+    "standard-react"
+  ],
+  "plugins" : [
+    "flow-vars"
+  ],
+  "env"     : {
+    "browser" : true
+  },
+  "rules": {
+    "comma-dangle": [2, "always-multiline"],
+    "semi" : [2, "always"],
+    "no-console": 2,
+    "space-infix-ops": 0,
+    "max-len": [2, 160, 2],
+    "flow-vars/define-flow-type": 1,
+    "flow-vars/use-flow-type": 1,
+    "react/jsx-boolean-value": [2, "always"]
+  }
+}
