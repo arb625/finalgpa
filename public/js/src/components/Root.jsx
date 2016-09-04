@@ -1,6 +1,6 @@
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { Router, Route, Link, browserHistory } from 'react-router'
+// import { Router, Route, Link, browserHistory } from 'react-router'
 
 import Layout from './Layout.jsx';
 import App from './App.jsx';

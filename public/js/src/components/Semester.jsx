@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow} from 'material-ui/Table';
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
+import DeleteForeverIcon from 'material-ui/svg-icons/action/delete-forever';
 import shortid from 'shortid';
 
 import CourseRow from './CourseRow.jsx';
@@ -101,12 +102,17 @@ class Semester extends React.Component {
                 {/*
                 {editImg}
                 {saveEditImg}
-                */}
                 <img src={removeSemesterImgSrc}
                   style={{ cursor: 'pointer' }}
                   onClick={() => this.props.removeSemesterAction(this.props.name)}
                   onMouseEnter={() => this.setState({mouseOnRemoveSemester: true})}
                   onMouseLeave={() => this.setState({mouseOnRemoveSemester: false})} />
+                */}
+                <DeleteForeverIcon 
+                  onClick={() => this.props.removeSemesterAction(this.props.name)}
+                  hoverColor="red"
+                  style={{ cursor: 'pointer' }}
+                />
               </TableHeaderColumn>
             </TableRow>
             <TableRow style={{width:'100vw'}}>

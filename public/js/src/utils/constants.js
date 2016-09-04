@@ -25,3 +25,5 @@ export const gradesToPoints = {
   'D-': 0.7,
   'F': 0,
 };
+
+const imgBasePath = '..'

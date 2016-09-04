@@ -5,6 +5,7 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 import TextField from 'material-ui/TextField';
 import Checkbox from 'material-ui/Checkbox';
+import NavigationCloseIcon from 'material-ui/svg-icons/navigation/close';
 import _ from 'underscore';
 
 import Course from '../utils/Course';
@@ -100,11 +101,16 @@ class CourseRow extends React.Component {
           }} checked={this.props.course['isCS']} />
         </TableRowColumn>
         <TableRowColumn>
+          {/*
           <img src={removeCourseImg} style={{ cursor: 'pointer' }} onClick={
             () => this.props.removeCourseAction(this.props.course['semesterName'], this.props.course['id'])
           }
           onMouseEnter={() => this.setState({mouseOnRemoveCouse: true})}
           onMouseLeave={() => this.setState({mouseOnRemoveCouse: false})} />
+          */}
+          <NavigationCloseIcon style={{ cursor: 'pointer' }} hoverColor="red" onClick={
+            () => this.props.removeCourseAction(this.props.course['semesterName'], this.props.course['id'])
+          } />
         </TableRowColumn>
       </TableRow>
     );
