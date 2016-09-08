@@ -6,6 +6,8 @@ import MenuItem from 'material-ui/MenuItem';
 import TextField from 'material-ui/TextField';
 import Checkbox from 'material-ui/Checkbox';
 import NavigationCloseIcon from 'material-ui/svg-icons/navigation/close';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
 import _ from 'underscore';
 
 import Course from '../utils/Course';

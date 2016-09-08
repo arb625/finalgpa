@@ -84,7 +84,7 @@ class AddSemesterBox extends React.Component {
 
     return (
       <div>
-        <RaisedButton label="Add Semester" primary={true} onClick={this.handleDialogOpen.bind(this)} />
+        <RaisedButton label="Add Semester" secondary={true} onClick={this.handleDialogOpen.bind(this)} />
         <Dialog
           title="Add Semester"
           actions={addSemesterDialogActions}

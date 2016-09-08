@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import {Card, CardText} from 'material-ui/Card';
 
 class SummaryBox extends React.Component {
 
@@ -12,9 +13,12 @@ class SummaryBox extends React.Component {
   render () {
     return (
       <div>
-        <p>Overall GPA: {this.props.overallGPA}</p>
-        <p>Major/Technical GPA: {this.props.technicalGPA}</p>
-        <p>CS GPA: {this.props.CSGPA}</p>
+        <br />
+        <Card>
+          <CardText>Overall GPA: {this.props.overallGPA}</CardText>
+          <CardText>Major/Technical GPA: {this.props.technicalGPA}</CardText>
+          <CardText>CS GPA: {this.props.CSGPA}</CardText>
+        </Card>
       </div>
     );
   }

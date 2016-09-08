@@ -38,11 +38,10 @@ export default class App extends React.Component {
   render () {
     return (
       <div>
-        <h1>UC Berkeley GPA Calculator</h1>
-        <h2>by Anurag Baddam</h2>
-        <SemestersList />
-        <AddSemesterBox />
-        <RaisedButton label="Calculate GPA" secondary={true} onClick={this.displayGPASummary.bind(this)} />
+        <img src='/public/img/logo.png' />
+        <SemestersList /><br />
+        <AddSemesterBox /><br />
+        <RaisedButton label="Calculate GPA" backgroundColor='#a4c639' labelColor='white' onClick={this.displayGPASummary.bind(this)} />
         <SummaryBox />
       </div>
     );

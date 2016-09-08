@@ -28,11 +28,12 @@ function calculateGPA (courses) {
   const totalPoints = sum(_.map(courses, (course) => {
     return gradesToPoints[course['grade']]*course['units'];
   }));
+  if (totalUnits === 0) return 0;
   return totalPoints/totalUnits;
 }
 
 function sum (arr) {
   return _.reduce(arr, (memo, num) => {
     return memo + num;
-  });
+  }, 0);
 };

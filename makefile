@@ -1,3 +1,5 @@
+run_server:
+	http-server .
 build:
 	npm run build
 build_and_watch:
