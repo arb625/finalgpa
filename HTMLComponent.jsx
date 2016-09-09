@@ -8,8 +8,8 @@ module.exports = React.createClass({
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
         </head>
         <body>
-          <div id="root"></div>
-          <script type="text/javascript" src="public/js/build/build.js"></script>
+          <div id="root" />
+          <script src="public/js/build/build.js" />
         </body>
       </html>
     );

@@ -17,7 +17,7 @@ import {
   calculateCSGPA,
 } from '../utils/calculateGPA';
 
-export default class App extends React.Component {
+export class App extends React.Component {
 
   static propTypes = {
     semesters: React.PropTypes.object,
