@@ -63,46 +63,65 @@ var path = require('path');
 // });
 
 // const path = require('path')
-const Express = require('express')
-const React = require('react')
+// const Express = require('express')
+// const React = require('react')
 
-const serverCode = require('./public/js/src/utils/serverCode.js')
+// const serverCode = require('./public/js/src/utils/serverCode.js')
 
-const app = Express()
-const PORT = process.env.PORT || 8080;
+// const app = Express()
+// const PORT = process.env.PORT || 8080;
 
-// This is fired every time the server side receives a request
-app.use(serverCode.handleRender)
+// // This is fired every time the server side receives a request
+// app.use(serverCode.handleRender)
 
-// // We are going to fill these out in the sections to follow
-// function handleRender(req, res) {
-//   // Create a new Redux store instance
-//   const store = configureStore();
+// // // We are going to fill these out in the sections to follow
+// // function handleRender(req, res) {
+// //   // Create a new Redux store instance
+// //   const store = configureStore();
 
-//   // Render the component to a string
-//   const html = renderToString(
-//     <Provider store={store}>
-//       <Root />
-//     </Provider>
-//   );
+// //   // Render the component to a string
+// //   const html = renderToString(
+// //     <Provider store={store}>
+// //       <Root />
+// //     </Provider>
+// //   );
 
-//   // Send the rendered page back to the client
-//   res.send(renderFullPage(html));
-// }
-// function renderFullPage (html) {
-//   return `
-//     <html>
-//       <head>
-//         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
-//       </head>
-//       <body>
-//         <div id="root">${html}</div>
-//         <script src="public/js/build/build.js" />
-//       </body>
-//     </html>
-//   `;
-// }
+// //   // Send the rendered page back to the client
+// //   res.send(renderFullPage(html));
+// // }
+// // function renderFullPage (html) {
+// //   return `
+// //     <html>
+// //       <head>
+// //         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+// //       </head>
+// //       <body>
+// //         <div id="root">${html}</div>
+// //         <script src="public/js/build/build.js" />
+// //       </body>
+// //     </html>
+// //   `;
+// // }
 
-app.listen(PORT, function () {
-  console.log('listening at port ' + PORT);
+// app.listen(PORT, function () {
+//   console.log('listening at port ' + PORT);
+// });
+
+var path = require('path');
+var express = require('express');
+var app = express();
+var PORT = process.env.PORT || 8080
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', function(request, response) {
+  response.sendFile(__dirname + '/public/index.html')
+});
+
+app.listen(PORT, function(error) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.info("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+  }
 });

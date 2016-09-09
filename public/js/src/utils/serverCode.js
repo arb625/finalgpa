@@ -17,7 +17,7 @@ module.exports = {
       </Provider>
     );
 
-      const preloadedState = store.getState()
+    const preloadedState = store.getState()
 
     // Send the rendered page back to the client
     res.send(this.renderFullPage(html, preloadedState));   
