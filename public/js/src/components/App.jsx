@@ -38,7 +38,6 @@ export class App extends React.Component {
   render () {
     return (
       <div>
-        <img src='/public/img/logo.png' />
         <SemestersList /><br />
         <AddSemesterBox /><br />
         <RaisedButton label="Calculate GPA" backgroundColor='#a4c639' labelColor='white' onClick={this.displayGPASummary.bind(this)} />
