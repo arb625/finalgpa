@@ -15,9 +15,9 @@ class SummaryBox extends React.Component {
       <div>
         <br />
         <Card>
-          <CardText>Overall GPA: {this.props.overallGPA}</CardText>
-          <CardText>Major/Technical GPA: {this.props.technicalGPA}</CardText>
-          <CardText>CS GPA: {this.props.CSGPA}</CardText>
+          <CardText>Overall GPA: <b>{this.props.overallGPA}</b></CardText>
+          <CardText>Major/Technical GPA: <b>{this.props.technicalGPA}</b></CardText>
+          <CardText>CS GPA: <b>{this.props.CSGPA}</b></CardText>
         </Card>
       </div>
     );
