@@ -9,6 +9,7 @@ export default function configureStore (initialState = {}) {
   
   // test comment 2
 
+  const test = 1
   const store = createStore(rootReducer, initialState, autoRehydrate());
   persistStore(store);
   return store;
