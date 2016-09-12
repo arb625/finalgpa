@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public/img')));
 
 app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/public/index.html')
+  response.sendFile(__dirname + '/index.html')
 });
 
 app.listen(PORT, function(error) {
