@@ -16,3 +16,5 @@ Or you can use it locally:
 3. Run the express server locally:  
 `node server.js`  
 and go to [http://localhost:8080/](http://localhost:8080/)
+
+**Stack**: [React](https://github.com/facebook/react), [Node](https://github.com/nodejs/node), [Express](https://github.com/expressjs/express)
