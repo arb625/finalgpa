@@ -58985,7 +58985,7 @@
 	        _react2.default.createElement(
 	          _Table.TableRowColumn,
 	          null,
-	          _react2.default.createElement(_TextField2.default, { id: 'courseNameField', style: colWidth, defaultValue: this.props.course['name'], onChange: this.handleNameChange.bind(this) })
+	          _react2.default.createElement(_TextField2.default, { id: 'courseNameField', style: colWidth, onChange: this.handleNameChange.bind(this), value: this.props.course.name })
 	        ),
 	        _react2.default.createElement(
 	          _Table.TableRowColumn,

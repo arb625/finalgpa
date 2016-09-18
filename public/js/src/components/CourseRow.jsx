@@ -80,7 +80,7 @@ class CourseRow extends React.Component {
     return (
       <TableRow displayBorder={true} >
         <TableRowColumn>
-          <TextField id="courseNameField" style={colWidth} defaultValue={this.props.course['name']} onChange={this.handleNameChange.bind(this)} />
+          <TextField id="courseNameField" style={colWidth} onChange={this.handleNameChange.bind(this)} value={this.props.course.name} />
         </TableRowColumn>
         <TableRowColumn>
           <SelectField style={colWidth} value={_.indexOf(allUnits, this.props.course['units'])} onChange={this.handleUnitsChange.bind(this)}>
